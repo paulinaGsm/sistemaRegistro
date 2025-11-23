@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/seccion"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C8E6C9"
+    tools:context=".RegistroActivity">
+
+    <!-- HEADER -->
+    <include
+        android:id="@+id/header2"
+        layout="@layout/header2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <!-- CONTENIDO PRINCIPAL (debajo del header) -->
+    <LinearLayout
+        android:id="@+id/contenido"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header2"
+        android:layout_above="@id/footer"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:background="#C8E6C9"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_tarjetaSalud"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tarjeta de salud familiar"
+            android:textSize="17sp"
+            android:padding="10dp"
+            android:textColor="@android:color/white"
+            android:layout_marginHorizontal="4dp"
+            android:backgroundTint="#6B9963"/>
+
+        <Button
+            android:id="@+id/btn_codigoValoracion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="guia de valoracion"
+            android:textSize="17sp"
+            android:padding="10dp"
+            android:layout_marginTop="30dp"
+            android:textColor="@android:color/white"
+            android:layout_marginHorizontal="4dp"
+            android:backgroundTint="#6B9963"/>
+
+
+
+
+    </LinearLayout>
+
+    <!-- FOOTER (fijo al fondo, de orilla a orilla) -->
+    <include
+        android:id="@+id/footer"
+        layout="@layout/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

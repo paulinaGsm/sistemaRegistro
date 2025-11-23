@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- HEADER arriba -->
+    <include
+        android:id="@+id/header2"
+        layout="@layout/header2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <!-- CONTENIDO en medio -->
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_below="@id/header2"
+        android:layout_above="@id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="20dp"
+        android:background="#C8E6C9">
+
+        <TextView
+            android:id="@+id/VerificacionCod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Verificación de código"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:paddingBottom="20dp"
+            android:textColor="#506A32" />
+
+        <EditText
+            android:id="@+id/et_verification_code"
+            android:hint="Ingresa el código"
+            android:inputType="number"
+            android:drawableStart="@drawable/ic_password"
+            android:padding="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"/>
+
+
+        <Button
+            android:id="@+id/btn_verify_code"
+            android:text="Verificar código"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:layout_marginHorizontal="4dp"
+            android:backgroundTint="#6B9963" />
+
+
+    </LinearLayout>
+
+    <!-- FOOTER abajo -->
+    <include
+        android:id="@+id/footer"
+        layout="@layout/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

@@ -1,0 +1,49 @@
+name: Android CI - Pruebas Unitarias
+
+# Ejecutar el workflow cuando se haga push o pull request a main
+on:
+  push:
+    branches: [ main, Paulina, Hannia2.0 ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    name: Ejecutar Pruebas Unitarias
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Descargar el código del repositorio
+      - name: Checkout código
+        uses: actions/checkout@v4
+
+      # 2. Configurar JDK (Java Development Kit)
+      - name: Configurar JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: gradle
+
+      # 3. Dar permisos de ejecución a gradlew
+      - name: Dar permisos a gradlew
+        run: chmod +x gradlew
+
+      # 4. Ejecutar las pruebas unitarias
+      - name: Ejecutar pruebas unitarias
+        run: ./gradlew test --stacktrace
+
+      # 5. Subir reporte de pruebas (solo si fallan)
+      - name: Subir reporte de pruebas
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-reports
+          path: app/build/reports/tests/
+
+      # 6. Publicar resultados de pruebas
+      - name: Publicar resultados
+        if: always()
+        uses: EnricoMi/publish-unit-test-result-action@v2
+        with:
+          files: app/build/test-results/**/*.xml

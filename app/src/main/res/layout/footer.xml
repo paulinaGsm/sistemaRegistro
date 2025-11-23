@@ -1,0 +1,25 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:background="#FFFFFF"
+      android:padding="16dp">
+    <!-- #204722 color verde
+       <TextView
+           android:id="@+id/tv_footer_text"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Aplicacion Diseñada e Implementada por Estudiantes de ISC"
+           android:textColor="@android:color/white"
+           android:textSize="14sp" />
+
+             -->
+  </LinearLayout>
+
+
+
+
+

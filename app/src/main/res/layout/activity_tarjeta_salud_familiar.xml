@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C8E6C9">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="0dp"
+        android:showDividers="middle">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="36dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_principal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="TARJETA DE SALUD FAMILIAR"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textSize="21sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:paddingBottom="12dp"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Subtítulo -->
+        <TextView
+            android:id="@+id/tv_titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="SECCIÓN 1. DATOS DE IDENTIFICACION"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:background="#506A32"
+            android:padding="8dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- TARJETA: Sección 1 -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp"
+            app:contentPadding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <EditText
+                    android:id="@+id/et_Id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/FormEditText"
+                    android:hint="Ingresa tu ID de estudiante"/>
+
+                <!-- CAMPOS DEL FORMULARIO -->
+                <EditText
+                    android:id="@+id/nombreInstitucion"
+                    android:hint="Nombre de la institución"
+                    style="@style/FormEditText" />
+
+                <EditText
+                    android:id="@+id/JurisdiccionSanitaria"
+                    android:hint="Jurisdicción Sanitaria"
+                    style="@style/FormEditText" />
+
+                <EditText
+                    android:id="@+id/municipio"
+                    android:hint="Municipio"
+                    style="@style/FormEditText" />
+
+                <EditText
+                    android:id="@+id/estado"
+                    android:hint="Estado"
+                    style="@style/FormEditText" />
+
+                <EditText
+                    android:id="@+id/apellidoFamiliar"
+                    android:hint="Apellidos de la familia"
+                    style="@style/FormEditText" />
+
+                <EditText
+                    android:id="@+id/responsableFamilia"
+                    android:hint="Responsable de la familia"
+                    style="@style/FormEditText" />
+
+                <EditText
+                    android:id="@+id/domicilio"
+                    android:hint="Domicilio"
+                    style="@style/FormEditText" />
+
+                <EditText
+                    android:id="@+id/numExt"
+                    android:hint="Num. Exterior"
+                    style="@style/FormEditText" />
+
+                <EditText
+                    android:id="@+id/numInt"
+                    android:hint="Num. Interior"
+                    style="@style/FormEditText" />
+
+                <EditText
+                    android:id="@+id/colonia"
+                    android:hint="Colonia"
+                    style="@style/FormEditText" />
+
+                <EditText
+                    android:id="@+id/no_manzana"
+                    android:hint="No. de Manzana"
+                    style="@style/FormEditText" />
+
+                <EditText
+                    android:id="@+id/conformacionFamiliar"
+                    android:hint="Conformación Familiar"
+                    style="@style/FormEditText" />
+
+                <EditText
+                    android:id="@+id/no_integrantes"
+                    android:hint="No. de integrantes en la familia"
+                    style="@style/FormEditText" />
+
+                <EditText
+                    android:id="@+id/lugarProcedencia"
+                    android:hint="Lugar de Procedencia"
+                    style="@style/FormEditText" />
+
+                <EditText
+                    android:id="@+id/religion"
+                    android:hint="Religión"
+                    style="@style/FormEditText" />
+
+                <EditText
+                    android:id="@+id/seguridadSocial"
+                    android:hint="Seguridad Social"
+                    style="@style/FormEditText" />
+
+                <EditText
+                    android:id="@+id/ingresoMensual"
+                    android:hint="Ingreso Mensual Familiar Total"
+                    style="@style/FormEditText" />
+
+                <EditText
+                    android:id="@+id/no_familiarEmigrados"
+                    android:hint="No. de Familiares Emigrados"
+                    style="@style/FormEditText" />
+
+                <EditText
+                    android:id="@+id/motivo"
+                    android:hint="Motivo"
+                    style="@style/FormEditText" />
+
+                <EditText
+                    android:id="@+id/expediente"
+                    android:hint="Expediente"
+                    style="@style/FormEditText" />
+
+                <EditText
+                    android:id="@+id/fechaElaboracion"
+                    android:hint="Fecha de elaboración"
+                    style="@style/FormEditText" />
+
+                <EditText
+                    android:id="@+id/actualizacion"
+                    android:hint="Actualización"
+                    style="@style/FormEditText" />
+
+                <EditText
+                    android:id="@+id/rotacion_Equipo"
+                    android:hint="Rotación / Equipo"
+                    style="@style/FormEditText" />
+
+                <Button
+                    android:id="@+id/btnGuardarSiguiente1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="Guardar y Siguiente"
+                    android:background="@drawable/button_rounded"
+                    android:backgroundTint="#6B9963"
+                    android:textColor="@android:color/white" />
+
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <include
+            android:id="@+id/footer"
+            layout="@layout/footer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+</ScrollView>
+
+
+
+
+
+
+    <!-- ==================== FOOTER (VISIBLE SIEMPRE) ====================
+    <include
+        android:id="@+id/footer"
+        layout="@layout/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+        -->
+

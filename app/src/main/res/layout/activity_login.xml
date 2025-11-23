@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/seccion"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistroActivity">
+
+    <!-- HEADER -->
+    <include
+        android:id="@+id/header2"
+        layout="@layout/header2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <LinearLayout
+        android:id="@+id/contenido"
+        android:layout_below="@id/header2"
+       android:layout_above="@id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Iniciar Sesión"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#2d4a2d"
+            android:letterSpacing="-0.02"
+            android:layout_marginBottom="10dp" />
+
+        <!-- Email -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/L_Et_email"
+                android:hint="@string/L_Et_email"
+                android:inputType="textEmailAddress"
+                android:drawableStart="@drawable/ic_email"
+                android:drawablePadding="10dp"
+                android:padding="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:background="@drawable/input_professional"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Password -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:passwordToggleEnabled="true"
+            android:layout_marginTop="8dp">
+
+            <EditText
+                android:id="@+id/L_Et_password"
+                android:hint="@string/L_Et_password"
+                android:inputType="textPassword"
+                android:drawableStart="@drawable/ic_password"
+                android:drawablePadding="10dp"
+                android:padding="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:background="@drawable/input_professional"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Selección de tipo de usuario -->
+        <RadioGroup
+            android:id="@+id/Rg_tipo_usuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="15dp">
+
+            <RadioButton
+                android:id="@+id/Rb_alumno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alumno"
+                android:checked="true"
+                android:textColor="@color/black"/>
+
+            <RadioButton
+                android:id="@+id/Rb_docente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Docente"
+                android:layout_marginStart="20dp"
+                android:textColor="@color/black"/>
+        </RadioGroup>
+
+
+        <!-- Botón Login -->
+        <Button
+            android:id="@+id/Btn_login"
+            android:text="@string/Btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textSize="17sp"
+            android:layout_marginBottom="24dp"
+            android:padding="12dp"
+            android:layout_marginTop="40dp"
+            android:textColor="@android:color/white"
+            android:layout_marginHorizontal="4dp"
+            android:background="@drawable/button_rounded"
+            android:elevation="4dp" />
+
+    </LinearLayout>
+
+    <!-- FOOTER -->
+    <include
+        android:id="@+id/footer"
+        layout="@layout/footer"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+
+</RelativeLayout>

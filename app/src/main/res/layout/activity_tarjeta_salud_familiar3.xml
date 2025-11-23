@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C8E6C9">
+
+    <!-- ==================== HEADER ====================
+    <include
+        android:id="@+id/header"
+        layout="@layout/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+        -->
+
+    <!-- ==================== CONTENIDO SCROLLABLE ==================== -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="0dp"
+        android:showDividers="middle">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="36dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="0dp"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_principal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="TARJETA DE SALUD FAMILIAR"
+                    android:fontFamily="@font/poppins_medium"
+                    android:textSize="21sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"
+                    android:paddingBottom="12dp"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <!-- ==================== TÍTULO ==================== -->
+    <TextView
+        android:id="@+id/tv_titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="SECCIÓN III. DATOS CONDICIONANTES"
+        android:padding="16dp"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:background="#506A32"
+        android:layout_marginBottom="24dp" />
+
+
+        <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="0dp"
+        android:background="#C8E6C9">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:padding="16dp">
+
+
+
+            <!-- ==================== SECCIÓN MORTALIDAD ==================== -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#F5F5F5"
+                android:padding="16dp"
+                android:layout_marginBottom="24dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="MORTALIDAD"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:paddingBottom="12dp"
+                    android:textColor="#388E3C" />
+
+                <EditText
+                    android:id="@+id/et_txtMortalidad"
+                    android:hint="Ingrese información de mortalidad"
+                    android:inputType="text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:background="#FFFFFF"
+                    android:padding="12dp"
+                    android:textSize="14sp" />
+
+                <!-- TABLA MORTALIDAD CON BORDES DEFINIDOS -->
+                <TableLayout
+                    android:id="@+id/table_mortalidad"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:stretchColumns="*"
+                    android:background="#E0E0E0"
+                    android:padding="1dp">
+
+                    <!-- ENCABEZADO -->
+                    <TableRow
+                        android:background="#6B9963"
+                        android:padding="1dp">
+                        <TextView
+                            android:text="Sexo"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:padding="12dp"
+                            android:textColor="@android:color/white"
+                            android:textSize="14sp"
+                            android:background="#6B9963" />
+                        <TextView
+                            android:text="Edad"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:padding="12dp"
+                            android:textColor="@android:color/white"
+                            android:textSize="14sp"
+                            android:background="#6B9963"
+                            android:layout_marginStart="1dp" />
+                        <TextView
+                            android:text="Causa"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:padding="12dp"
+                            android:textColor="@android:color/white"
+                            android:textSize="14sp"
+                            android:background="#6B9963"
+                            android:layout_marginStart="1dp" />
+                    </TableRow>
+
+                    <!-- FILA 1 -->
+                    <TableRow android:background="#E0E0E0" android:padding="1dp">
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:inputType="text"
+                            android:background="#FFFFFF"
+                            android:textSize="14sp"
+                            android:padding="8dp" />
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:background="#FFFFFF"
+                            android:textSize="14sp"
+                            android:padding="8dp"
+                            android:layout_marginStart="1dp" />
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:inputType="text"
+                            android:background="#FFFFFF"
+                            android:textSize="14sp"
+                            android:padding="8dp"
+                            android:layout_marginStart="1dp" />
+                    </TableRow>
+
+                    <!-- FILA 2 -->
+                    <TableRow android:background="#E0E0E0" android:padding="1dp">
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:inputType="text"
+                            android:background="#FFFFFF"
+                            android:textSize="14sp"
+                            android:padding="8dp"
+                            android:layout_marginTop="1dp" />
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:background="#FFFFFF"
+                            android:textSize="14sp"
+                            android:padding="8dp"
+                            android:layout_marginStart="1dp"
+                            android:layout_marginTop="1dp" />
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:inputType="text"
+                            android:background="#FFFFFF"
+                            android:textSize="14sp"
+                            android:padding="8dp"
+                            android:layout_marginStart="1dp"
+                            android:layout_marginTop="1dp" />
+                    </TableRow>
+
+                    <!-- FILA 3 -->
+                    <TableRow android:background="#E0E0E0" android:padding="1dp">
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:inputType="text"
+                            android:background="#FFFFFF"
+                            android:textSize="14sp"
+                            android:padding="8dp"
+                            android:layout_marginTop="1dp" />
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:background="#FFFFFF"
+                            android:textSize="14sp"
+                            android:padding="8dp"
+                            android:layout_marginStart="1dp"
+                            android:layout_marginTop="1dp" />
+                        <EditText
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:inputType="text"
+                            android:background="#FFFFFF"
+                            android:textSize="14sp"
+                            android:padding="8dp"
+                            android:layout_marginStart="1dp"
+                            android:layout_marginTop="1dp" />
+                    </TableRow>
+                </TableLayout>
+
+                <Button
+                    android:id="@+id/btnAddMortalidadRow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+ Añadir fila"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:backgroundTint="#6B9963"
+                    android:textColor="@android:color/white"
+                    android:paddingStart="24dp"
+                    android:paddingEnd="24dp" />
+            </LinearLayout>
+
+            <!-- ==================== SECCIÓN MORBILIDAD ==================== -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#F5F5F5"
+                android:padding="16dp"
+                android:layout_marginBottom="24dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="MORBILIDAD"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:paddingBottom="12dp"
+                    android:textColor="#388E3C" />
+
+                <EditText
+                    android:id="@+id/et_txtMorbilidad"
+                    android:hint="Ingrese información de morbilidad"
+                    android:inputType="text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:background="#FFFFFF"
+                    android:padding="12dp"
+                    android:textSize="14sp" />
+
+                <!-- TABLA MORBILIDAD CON BORDES DEFINIDOS -->
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableLayout
+                        android:id="@+id/table_morbilidad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#E0E0E0"
+                        android:padding="1dp">
+
+                        <!-- ENCABEZADO -->
+                        <TableRow
+                            android:background="#6B9963"
+                            android:padding="1dp">
+                            <TextView
+                                android:text="Sexo"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                android:padding="12dp"
+                                android:textColor="@android:color/white"
+                                android:textSize="14sp"
+                                android:background="#6B9963"
+                                android:minWidth="80dp" />
+                            <TextView
+                                android:text="Edad"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                android:padding="12dp"
+                                android:textColor="@android:color/white"
+                                android:textSize="14sp"
+                                android:background="#6B9963"
+                                android:layout_marginStart="1dp"
+                                android:minWidth="70dp" />
+                            <TextView
+                                android:text="Causa"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                android:padding="12dp"
+                                android:textColor="@android:color/white"
+                                android:textSize="14sp"
+                                android:background="#6B9963"
+                                android:layout_marginStart="1dp"
+                                android:minWidth="100dp" />
+                            <TextView
+                                android:text="DX"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                android:padding="12dp"
+                                android:textColor="@android:color/white"
+                                android:textSize="14sp"
+                                android:background="#6B9963"
+                                android:layout_marginStart="1dp"
+                                android:minWidth="100dp" />
+                            <TextView
+                                android:text="TX"
+                                android:textStyle="bold"
+                                android:gravity="center"
+                                android:padding="12dp"
+                                android:textColor="@android:color/white"
+                                android:textSize="14sp"
+                                android:background="#6B9963"
+                                android:layout_marginStart="1dp"
+                                android:minWidth="100dp" />
+                        </TableRow>
+
+                        <!-- FILA 1 -->
+                        <TableRow android:background="#E0E0E0" android:padding="1dp">
+                            <EditText android:minWidth="80dp" android:layout_height="48dp" android:gravity="center" android:inputType="text" android:background="#FFFFFF" android:textSize="14sp" android:padding="8dp" />
+                            <EditText android:minWidth="70dp" android:layout_height="48dp" android:gravity="center" android:inputType="number" android:background="#FFFFFF" android:textSize="14sp" android:padding="8dp" android:layout_marginStart="1dp" />
+                            <EditText android:minWidth="100dp" android:layout_height="48dp" android:gravity="center" android:inputType="text" android:background="#FFFFFF" android:textSize="14sp" android:padding="8dp" android:layout_marginStart="1dp" />
+                            <EditText android:minWidth="100dp" android:layout_height="48dp" android:gravity="center" android:inputType="text" android:background="#FFFFFF" android:textSize="14sp" android:padding="8dp" android:layout_marginStart="1dp" />
+                            <EditText android:minWidth="100dp" android:layout_height="48dp" android:gravity="center" android:inputType="text" android:background="#FFFFFF" android:textSize="14sp" android:padding="8dp" android:layout_marginStart="1dp" />
+                        </TableRow>
+
+                        <!-- FILA 2 -->
+                        <TableRow android:background="#E0E0E0" android:padding="1dp">
+                            <EditText android:minWidth="80dp" android:layout_height="48dp" android:gravity="center" android:inputType="text" android:background="#FFFFFF" android:textSize="14sp" android:padding="8dp" android:layout_marginTop="1dp" />
+                            <EditText android:minWidth="70dp" android:layout_height="48dp" android:gravity="center" android:inputType="number" android:background="#FFFFFF" android:textSize="14sp" android:padding="8dp" android:layout_marginStart="1dp" android:layout_marginTop="1dp" />
+                            <EditText android:minWidth="100dp" android:layout_height="48dp" android:gravity="center" android:inputType="text" android:background="#FFFFFF" android:textSize="14sp" android:padding="8dp" android:layout_marginStart="1dp" android:layout_marginTop="1dp" />
+                            <EditText android:minWidth="100dp" android:layout_height="48dp" android:gravity="center" android:inputType="text" android:background="#FFFFFF" android:textSize="14sp" android:padding="8dp" android:layout_marginStart="1dp" android:layout_marginTop="1dp" />
+                            <EditText android:minWidth="100dp" android:layout_height="48dp" android:gravity="center" android:inputType="text" android:background="#FFFFFF" android:textSize="14sp" android:padding="8dp" android:layout_marginStart="1dp" android:layout_marginTop="1dp" />
+                        </TableRow>
+
+                        <!-- FILA 3 -->
+                        <TableRow android:background="#E0E0E0" android:padding="1dp">
+                            <EditText android:minWidth="80dp" android:layout_height="48dp" android:gravity="center" android:inputType="text" android:background="#FFFFFF" android:textSize="14sp" android:padding="8dp" android:layout_marginTop="1dp" />
+                            <EditText android:minWidth="70dp" android:layout_height="48dp" android:gravity="center" android:inputType="number" android:background="#FFFFFF" android:textSize="14sp" android:padding="8dp" android:layout_marginStart="1dp" android:layout_marginTop="1dp" />
+                            <EditText android:minWidth="100dp" android:layout_height="48dp" android:gravity="center" android:inputType="text" android:background="#FFFFFF" android:textSize="14sp" android:padding="8dp" android:layout_marginStart="1dp" android:layout_marginTop="1dp" />
+                            <EditText android:minWidth="100dp" android:layout_height="48dp" android:gravity="center" android:inputType="text" android:background="#FFFFFF" android:textSize="14sp" android:padding="8dp" android:layout_marginStart="1dp" android:layout_marginTop="1dp" />
+                            <EditText android:minWidth="100dp" android:layout_height="48dp" android:gravity="center" android:inputType="text" android:background="#FFFFFF" android:textSize="14sp" android:padding="8dp" android:layout_marginStart="1dp" android:layout_marginTop="1dp" />
+                        </TableRow>
+                    </TableLayout>
+                </HorizontalScrollView>
+
+                <Button
+                    android:id="@+id/btnAddMorbilidadRow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+ Añadir fila"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:backgroundTint="#6B9963"
+                    android:textColor="@android:color/white"
+                    android:paddingStart="24dp"
+                    android:paddingEnd="24dp" />
+            </LinearLayout>
+
+            <!-- ==================== BOTÓN GUARDAR ==================== -->
+            <Button
+                android:id="@+id/btnGuardarSeccion3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Guardar y Siguiente"
+                android:background="@drawable/button_rounded"
+                android:backgroundTint="#6B9963"
+                android:textColor="@android:color/white" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="24dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/footer"
+        layout="@layout/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

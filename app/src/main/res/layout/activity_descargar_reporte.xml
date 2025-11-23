@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+
+    <!-- HEADER de extremo a extremo
+
+     android:background="@drawable/button_rounded"-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="25dp"
+        android:elevation="4dp"
+        android:background="#204722">
+
+        <!-- Título o Logo -->
+        <TextView
+            android:id="@+id/tv_titulo_app"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="MIS REGISTROS"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="70dp" /> <!-- Espacio superior -->
+
+    <!-- CONTENIDO PRINCIPAL
+     android:background="#C8E6C9"  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="16dp"
+        >
+
+        <EditText
+            android:id="@+id/et_id_estudiante"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ID del Estudiante"
+            android:inputType="text"
+            android:padding="12dp"
+            style="@style/FormEditText"
+            android:textStyle="bold"
+            android:drawablePadding="10dp"
+            android:layout_marginTop="10dp" />
+
+        <Spinner
+            android:id="@+id/spinner_ids"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginTop="12dp" />
+
+        <Button
+            android:id="@+id/btn_buscar"
+            android:text="Buscar Encuestas"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:textSize="15sp"
+            android:layout_marginBottom="24dp"
+            android:padding="12dp"
+            android:layout_marginTop="40dp"
+            android:textColor="@android:color/white"
+            android:layout_marginHorizontal="4dp"
+            android:backgroundTint="#6B9963"
+            android:background="@drawable/button_rounded"/>
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvEstudiantes"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- FOOTER de extremo a extremo -->
+    <include
+        android:id="@+id/footer"
+        layout="@layout/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

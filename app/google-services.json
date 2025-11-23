@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "160238593105",
+    "project_id": "registro-183a0",
+    "storage_bucket": "registro-183a0.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:160238593105:android:0aae844c78d7578c3a4470",
+        "android_client_info": {
+          "package_name": "com.uaa.registro_uaa"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDz51A4y6M_lDzbHR0lcktCRf95bPTWQrE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

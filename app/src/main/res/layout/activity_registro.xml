@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistroActivity">
+
+    <!-- HEADER -->
+    <include
+        android:id="@+id/header2"
+        layout="@layout/header2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <!-- CONTENIDO en medio  android:background="#C8E6C9" -->
+    <LinearLayout
+        android:id="@+id/content"
+        android:layout_below="@id/header2"
+        android:layout_above="@id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="10dp"
+        >
+
+        <!-- Título -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Crear Cuenta"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#2d4a2d"
+            android:letterSpacing="-0.02"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- Subtítulo -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Completa el formulario para registrarte"
+            android:textSize="15sp"
+            android:textColor="#5a7a5a"
+            android:layout_marginBottom="32dp"/>
+
+
+
+
+        <EditText
+            android:id="@+id/id_registro"
+            android:hint="Ingrese su ID"
+            android:inputType="textPersonName|textCapWords"
+            android:drawableStart="@drawable/ic_nombre_usuario"
+            android:padding="20dp"
+            android:drawablePadding="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:background="@drawable/input_professional"
+           />
+
+        <EditText
+            android:id="@+id/R_Et_nombre_usuario"
+            android:hint="@string/R_Et_nombre_usuario"
+            android:inputType="textPersonName|textCapWords"
+            android:drawableStart="@drawable/ic_nombre_usuario"
+            android:padding="20dp"
+            android:drawablePadding="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:background="@drawable/input_professional"
+           />
+
+        <EditText
+            android:id="@+id/R_Et_email"
+            android:hint="@string/R_Et_email"
+            android:inputType="textEmailAddress"
+            android:drawableStart="@drawable/ic_email"
+            android:padding="20dp"
+            android:drawablePadding="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:background="@drawable/input_professional"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:passwordToggleEnabled="true">
+            <EditText
+                android:id="@+id/R_Et_password"
+                android:hint="@string/R_Et_password"
+                android:inputType="textPassword"
+                android:drawableStart="@drawable/ic_password"
+                android:padding="20dp"
+                android:drawablePadding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:background="@drawable/input_professional"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:passwordToggleEnabled="true">
+            <EditText
+                android:id="@+id/R_Et_r_password"
+                android:hint="@string/R_Et_r_password"
+                android:inputType="textPassword"
+                android:drawableStart="@drawable/ic_password"
+                android:padding="20dp"
+                android:drawablePadding="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:background="@drawable/input_professional"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Badge de seguridad -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="12dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="28dp"
+            android:background="@drawable/btn_salud_bg">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:src="@drawable/ic_security"
+
+                android:layout_marginEnd="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tus datos están protegidos y encriptados"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="#2d4a2d"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/Btn_registrar"
+            android:text="@string/Btn_registrar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textSize="17sp"
+            android:layout_marginBottom="24dp"
+            android:padding="12dp"
+            android:layout_marginTop="40dp"
+            android:textColor="@android:color/white"
+            android:layout_marginHorizontal="4dp"
+            android:backgroundTint="#6B9963"
+
+            android:background="@drawable/button_rounded"/>
+
+    </LinearLayout>
+
+    <!-- FOOTER abajo -->
+    <include
+        android:id="@+id/footer"
+        layout="@layout/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

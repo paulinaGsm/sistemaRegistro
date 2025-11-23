@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_registro"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_registro_round"
+        android:supportsRtl="true"
+
+        android:theme="@style/Theme.MyApp"
+        tools:targetApi="31">
+
+
+
+
+        <!-- Login y otras pantallas que ya tenías -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".RegistroActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Inicio"
+            android:exported="false" />
+        <activity
+            android:name=".MenuPrincipalActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CodigoTarjetaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GuiaValoracionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DescargarReporteActivity"
+            android:exported="false" />
+
+        <activity android:name=".DescargarReporteTActivity" />
+
+
+        <activity
+            android:name=".MapaActivity"
+            android:exported="false" />
+
+
+        <!-- Pantallas nuevas -->
+        <activity
+            android:name=".ListStudentsActivity"
+            android:exported="false" />
+
+
+        <activity
+            android:name=".InfoStudentsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".DetalleTarjetaSaludActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MapaActivityDocente"
+            android:exported="false" />
+
+
+        <!--Actividad del mapa -->
+        <activity
+            android:name=".MapaManzanaActivity"
+            android:exported="false"/>
+
+        <activity android:name=".verManzanasActivity"
+            android:exported="false"/>
+
+
+        <!-- Pantallas de cuestionario tarjeta de salud  -->
+        <activity android:name="com.tuapp.salud.DatosIdentificacionActivity" />
+        <activity android:name="com.example.tuapp.SaneamientoBasicoActivity" />
+        <activity android:name="com.example.tuapp.DatosAdicionalesActivity" />
+        <activity android:name="com.example.tuapp.Alimentacion"/>
+        <activity android:name="com.example.tuapp.SeccionDemograficos" />
+        <activity android:name="com.example.tuapp.Deportes"/>
+        <activity android:name="com.example.tuapp.Observaciones"/>
+
+
+
+        <!--Pantalla para ver los registros de cada entrevistado de la parte de docente-->
+        <activity
+            android:name=".DetalleEntrevistaActivity"
+            android:exported="false" />
+
+        <!-- SplashScreen como entrada de la app -->
+        <activity
+            android:name=".SplashScreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+        <!-- MainActivity -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.MyApp">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+    </application>
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+
+</manifest>
